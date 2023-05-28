@@ -6,8 +6,10 @@
 </head>
 <body>
 
-    <h1>Вы на главной странице Django!</h1>>
-    <h2>templates/index.html</h2>>
+    <h1>{{header}}</h1>>
+    <p>Имя : {{user.name}} Age : {{user.age}}</p>
+    <p>Адресс: ул. {{addr.0}}, д. {{addr.1}}, кв. {{addr.2}}</p>
+    <p>Владеет языком : {{langs.0}}, {{langs.1}}</p>
 
 </body>
 </html>
