@@ -6,7 +6,7 @@ from django.http import HttpResponse, HttpResponseRedirect , HttpResponsePermane
 
 def index(request):
 
-    return render(request, "firstapp/home.html")
+    return render(request, "firstapp/index.html")
 
 def about(request):
     return HttpResponse("About")
