@@ -2,10 +2,11 @@
 {% block title%} Index {% endblock title %}
 {% block header%}Главная страница{% endblock header %}
 {% block content %}
-<p>Анализ возроста клиента</p>
-{% if age > 65 %}
-    <p>Клиент достиг пенсионного возроста</p>
-{% else %}
-    <p>Клиент не является пенсионером</p>
-{% endif %}
+<p>Категории продуктов</p>
+{% for i in cat %}
+    <li>{{i}}</li>
+  {% empty %}
+    <li>Категории продуктов отсутствуют</li>
+  {% endfor %}
+
 {% endblock content %}
