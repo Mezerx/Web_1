@@ -1,4 +1,11 @@
 {% extends "firstapp/base.html" %}
 {% block title%} Index {% endblock title %}
 {% block header%}Главная страница{% endblock header %}
-{% block content %}Связка шаблонов index.html and base.html{% endblock content %}
+{% block content %}
+<p>Анализ возроста клиента</p>
+{% if age > 65 %}
+    <p>Клиент достиг пенсионного возроста</p>
+{% else %}
+    <p>Клиент не является пенсионером</p>
+{% endif %}
+{% endblock content %}
