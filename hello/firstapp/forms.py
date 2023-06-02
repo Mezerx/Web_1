@@ -5,4 +5,4 @@ from django import forms
 
 
 class UserForm(forms.Form):
-    vyb = forms.NullBooleanField(label="Вы поедете в сочи этим летом?")
+    name = forms.CharField(label="Имя клиента", max_length=15, help_text="ФИО не более 15 символов",required=False)
