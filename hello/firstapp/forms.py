@@ -5,4 +5,4 @@ from django import forms
 
 
 class UserForm(forms.Form):
-    email = forms.EmailField(label="Электронный адрес", help_text="Обязательный символ - @ ")
+    ip_address = forms.GenericIPAddressField(label="Ip Address",help_text="Пример формата 192.168.1.1")
