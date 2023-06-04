@@ -10,3 +10,4 @@ class UserForm(forms.Form):
     #url_text = forms.URLField(label="Введите URL", help_text="Например https://www.google.com")
     #uuid = forms.UUIDField(label="Ввидите UUID", help_text="Формат xxxx-xxxx-xxxx")
     #combo_text = forms.ComboField(label="Введите URL", fields=[forms.URLField(),forms.CharField(max_length=20)])
+    file_path = forms.FilePathField(label="Выберите Файл", path="C:/Games/fallout/",allow_files="True",allow_folders="True")
