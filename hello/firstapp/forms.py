@@ -5,4 +5,8 @@ from django import forms
 
 
 class UserForm(forms.Form):
-    ip_address = forms.GenericIPAddressField(label="Ip Address",help_text="Пример формата 192.168.1.1")
+    #reg_text = forms.RegexField(label="Текст", regex="^[0-9][A-F][0-9]$")
+    #slug_text = forms.SlugField(label="Ввидите текст")
+    #url_text = forms.URLField(label="Введите URL", help_text="Например https://www.google.com")
+    #uuid = forms.UUIDField(label="Ввидите UUID", help_text="Формат xxxx-xxxx-xxxx")
+    #combo_text = forms.ComboField(label="Введите URL", fields=[forms.URLField(),forms.CharField(max_length=20)])
