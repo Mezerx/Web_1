@@ -11,4 +11,7 @@ class UserForm(forms.Form):
     #uuid = forms.UUIDField(label="Ввидите UUID", help_text="Формат xxxx-xxxx-xxxx")
     #combo_text = forms.ComboField(label="Введите URL", fields=[forms.URLField(),forms.CharField(max_length=20)])
     #file_path = forms.FilePathField(label="Выберите Файл", path="C:/Games/fallout/",allow_files="True",allow_folders="True")
-    file = forms.FileField(label="Файл")
+    #file = forms.FileField(label="Файл")
+    #image = forms.ImageField(label="Изображение")
+    #date = forms.DateField(label="Введите дату")
+    #time = forms.TimeField(label="Введите время")
