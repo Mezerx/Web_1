@@ -5,30 +5,19 @@
     <title>форма Django!</title>
 </head>
 <body>
-<h2>Форма как таблица</h2>
-<form method="POST">
+<h2>Валидация группы полей</h2>
+<form method="POST" novalidate>
     {% csrf_token %}
-<table>
-    {{ form.as_table }}
+<div class="form-group">
+    {% for field in form %}
+    <div>{{ field.label_tag }}</div>
+    <div>{{ field }}</div>
+    <div class="error">{{ field.errors}}</div>
+    {% endfor %}
+</div>
 </table>
 <input type="submit" value="Отправить" >
 </form>
-<h2>Форма как список</h2>
-<form method="POST">
-    {% csrf_token %}
-    <ul>
-        {{ form.as_ul }}
-    </ul>
-    <input type="submit" value="Отправить" >
-</form>
-<h2>Форма как параграф</h2>
-<form method="POST">
-    {% csrf_token %}
-    <div>
-    {{ form.as_p }}
-    </div>
-    <input type="submit" value="Отправить" >
 
-</form>
 </body>
 </html>
