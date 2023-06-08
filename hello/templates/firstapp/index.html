@@ -2,32 +2,34 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>форма Django!</title>
-    <style>
-        .myfield{
-            border: 2px solid #ccc;
-            border-radius: 5px;
-            height:25px;
-            margin: 10px 10px 10px0;
-            width: 200px;}
-            </style>
+    <title>Модели в Django!</title>
 
 </head>
 <body class="container">
-<h2>Присвоение стилей полям</h2>
-<form method="POST" >
+<form method="POST" action="create/" >
     {% csrf_token %}
-<div>
-    {% for field in form %}
-    <div class="row">
-    {{field.label_tag}}
-    <div class="col-md-10">{{field}}</div>
-    </div>
-    {% endfor %}
-
-
-
+<p>
+    <label>Введите имя </label>  <br>
+    <input type="text" name="name" />
+</p>
+<p>
+    <label>Введите возраст</label> <br>
+    <input type="number" name="age" />
+</p>
     <input type="submit" value="Отправить">
 </form>
+{% if people.count > 0 %}
+<h2>Список пользователей</h2>
+<table>
+    <tr><th>ID</th><th>Имя</th><th>Возраст</th></tr>
+    {% for person in people %}
+    <tr>
+        <td>{{person.id}}</td>
+        <td>{{person.name}}</td>
+        <td>{{person.age}}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endif %}
 </body>
 </html>
